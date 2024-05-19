@@ -1,0 +1,134 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ÂµVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: nguyen ASUS, NA, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.38.0.0
+Toolchain Path:  D:\STM32F051_learning\KeliC\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      Segger\JL2CM3.dll V2.99.42.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+D:\STM32F051_learning\Example\STM32F103RCT6_MotorControl\MDK-ARM\STM32F103RCT6_MotorControl.uvprojx
+Project File Date:  05/19/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'D:\STM32F051_learning\KeliC\ARM\ARMCLANG\Bin'
+Rebuild target 'STM32F103RCT6_MotorControl'
+assembling startup_stm32f103xe.s...
+compiling stm32f1xx_it.c...
+compiling stm32f1xx_hal_gpio_ex.c...
+compiling stm32f1xx_hal_msp.c...
+../Src/main.c(357): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    strncpy(substr, str + start,length);
+            ^~~~~~
+D:\STM32F051_learning\KeliC\ARM\ARMCLANG\Bin\..\include\string.h(84): note: passing argument to parameter here
+extern _ARMABI char *strncpy(char * __restrict /*s1*/, const char * __restrict /*s2*/, size_t /*n*/) __attribute__((__nonnull__(1,2)));
+                                                     ^
+../Src/main.c(357): warning: passing 'const uint8_t *' (aka 'const unsigned char *') to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    strncpy(substr, str + start,length);
+                    ^~~~~~~~~~~
+D:\STM32F051_learning\KeliC\ARM\ARMCLANG\Bin\..\include\string.h(84): note: passing argument to parameter here
+extern _ARMABI char *strncpy(char * __restrict /*s1*/, const char * __restrict /*s2*/, size_t /*n*/) __attribute__((__nonnull__(1,2)));
+                                                                                     ^
+../Src/main.c(373): warning: passing 'char[17]' to parameter of type 'const uint8_t *' (aka 'const unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+        HAL_UART_Transmit(&huart4,"\nMotor turn left",16,1000);
+                                  ^~~~~~~~~~~~~~~~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc\stm32f1xx_hal_uart.h(749): note: passing argument to parameter 'pData' here
+HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                                                                              ^
+../Src/main.c(379): warning: passing 'char[18]' to parameter of type 'const uint8_t *' (aka 'const unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+        HAL_UART_Transmit(&huart4,"\nMotor turn right",17,1000);
+                                  ^~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc\stm32f1xx_hal_uart.h(749): note: passing argument to parameter 'pData' here
+HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                                                                              ^
+../Src/main.c(387): warning: passing 'char[14]' to parameter of type 'const uint8_t *' (aka 'const unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+        HAL_UART_Transmit(&huart4,"\nMotor run fw",13,1000);
+                                  ^~~~~~~~~~~~~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc\stm32f1xx_hal_uart.h(749): note: passing argument to parameter 'pData' here
+HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                                                                              ^
+../Src/main.c(395): warning: passing 'char[14]' to parameter of type 'const uint8_t *' (aka 'const unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+        HAL_UART_Transmit(&huart4,"\nMotor run bw",13,1000);
+                                  ^~~~~~~~~~~~~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc\stm32f1xx_hal_uart.h(749): note: passing argument to parameter 'pData' here
+HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                                                                              ^
+../Src/main.c(406): warning: passing 'char[6]' to parameter of type 'const uint8_t *' (aka 'const unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+                        HAL_UART_Transmit(&huart4,"speed",5,1000);              
+                                                  ^~~~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc\stm32f1xx_hal_uart.h(749): note: passing argument to parameter 'pData' here
+HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                                                                              ^
+../Src/main.c(408): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+                        motor_speed = atoi(speed_str);
+                                           ^~~~~~~~~
+D:\STM32F051_learning\KeliC\ARM\ARMCLANG\Bin\..\include\stdlib.h(164): note: passing argument to parameter here
+extern _ARMABI int atoi(const char * /*nptr*/) __attribute__((__nonnull__(1)));
+                                             ^
+../Src/main.c(437): warning: passing 'char[8]' to parameter of type 'const uint8_t *' (aka 'const unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+                        default : HAL_UART_Transmit(&huart4,"invalid",7,1000);  break;
+                                                            ^~~~~~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc\stm32f1xx_hal_uart.h(749): note: passing argument to parameter 'pData' here
+HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                                                                              ^
+9 warnings generated.
+compiling main.c...
+compiling stm32f1xx_hal.c...
+compiling stm32f1xx_hal_tim_ex.c...
+compiling stm32f1xx_hal_gpio.c...
+compiling stm32f1xx_hal_rcc_ex.c...
+compiling stm32f1xx_hal_rcc.c...
+compiling stm32f1xx_hal_tim.c...
+compiling stm32f1xx_hal_cortex.c...
+compiling stm32f1xx_hal_pwr.c...
+compiling stm32f1xx_hal_exti.c...
+compiling stm32f1xx_hal_flash.c...
+compiling stm32f1xx_hal_flash_ex.c...
+compiling stm32f1xx_hal_dma.c...
+compiling system_stm32f1xx.c...
+compiling stm32f1xx_hal_uart.c...
+linking...
+Program Size: Code=15312 RO-data=728 RW-data=12 ZI-data=1820  
+FromELF: creating hex file...
+"STM32F103RCT6_MotorControl\STM32F103RCT6_MotorControl.axf" - 0 Error(s), 9 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil.STM32F1xx_DFP.2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_STM32F103RCT6_MotorControl
+  D:/STM32F051_learning/KeliC/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  D:/STM32F051_learning/KeliC/Keil/STM32F1xx_DFP/2.4.1/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+      Include file:  CMSIS/Core/Include/tz_context.h
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>
